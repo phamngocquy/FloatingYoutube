@@ -14,16 +14,15 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 
-
 public class VideoAdapter extends BaseAdapter {
 
-    class ViewHolder
-    {
+    class ViewHolder {
         ImageView imageView;
         TextView title;
         TextView channelTitle;
         TextView viewCount;
     }
+
     LayoutInflater inflater;
     Context context;
     ArrayList<Video> listVideo;
@@ -33,10 +32,11 @@ public class VideoAdapter extends BaseAdapter {
         this.context = context;
         this.listVideo = listVideo;
     }
-    public  ArrayList<Video> getListVideo()
-    {
+
+    public ArrayList<Video> getListVideo() {
         return listVideo;
     }
+
     @Override
     public int getCount() {
         return listVideo.size();
@@ -56,9 +56,8 @@ public class VideoAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder viewHolder;
         Video video = getItem(i);
-        if (view == null)
-        {
-            view = inflater.inflate(R.layout.item_video,null);
+        if (view == null) {
+            view = inflater.inflate(R.layout.item_video, null);
             viewHolder = new ViewHolder();
             viewHolder.imageView = (ImageView) view.findViewById(R.id.image);
             viewHolder.imageView.setBackgroundResource(R.drawable.wait_video);
@@ -70,13 +69,13 @@ public class VideoAdapter extends BaseAdapter {
         }
 
 
-            viewHolder = (ViewHolder) view.getTag();
+        viewHolder = (ViewHolder) view.getTag();
 
 
-            viewHolder.viewCount.setText(video.getViewCount());
-            viewHolder.title.setText(video.getTitle());
-            viewHolder.channelTitle.setText(video.getChannelTitle());
-            Picasso.with(context).load(video.getUrl()).into(viewHolder.imageView);
+        viewHolder.viewCount.setText(video.getViewCount());
+        viewHolder.title.setText(video.getTitle());
+        viewHolder.channelTitle.setText(video.getChannelTitle());
+        Picasso.with(context).load(video.getUrl()).into(viewHolder.imageView);
 
         return view;
     }
