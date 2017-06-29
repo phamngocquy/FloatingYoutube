@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="margin_botton">100px</dimen>
+    <dimen name="text_margin_top">25px</dimen>
+    <dimen name="margin_left_mainActivity">18dp</dimen>
+    <dimen name="margin_top_video_body">58dp</dimen>
+    <dimen name="magin_body_video">18dp</dimen>
+    <dimen name="sortCut_video">450px</dimen>
+    <dimen name="icon_size">70px</dimen>
+</resources>

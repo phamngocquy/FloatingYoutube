@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.quypn.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.quypn.AudioBoxBetaPNQ18101997.SplashActivity"
+            android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.quypn.AudioBoxBetaPNQ18101997.AboutActivity" />
+
+        <activity
+            android:name="com.quypn.AudioBoxBetaPNQ18101997.HomeActivity"
+            android:configChanges="orientation"
+            android:hardwareAccelerated="true" />
+
+        <service
+            android:name=".Floaty$FloatHeadService"
+            android:hardwareAccelerated="true" />
+
+        <receiver
+            android:name="com.quypn.AudioBoxBetaPNQ18101997.HomeActivity$MyReceive"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="ACTION_PLAY" />
+                <action android:name="ACTION_UPDATE" />
+                <action android:name="ACTION_NEXT" />
+                <action android:name="ACTION_PRE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.quypn.AudioBoxBetaPNQ18101997.RclAdapter$Next_Pre_Video">
+            <intent-filter>
+                <action android:name="NEXT_VIDEO" />
+                <action android:name="PRE_VIDEO" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

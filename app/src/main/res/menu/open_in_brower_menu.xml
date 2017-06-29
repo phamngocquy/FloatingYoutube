@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/opn_MN"
+        android:title="Open in brower"
+        app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/share_vid_MN"
+        android:title="Share Video"
+        app:showAsAction="collapseActionView"/>
+
+</menu>

@@ -1,0 +1,15 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    // fullhd - 480dpi
+    <dimen name="magin_body_video">15dp</dimen>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="sortCut_video">500px</dimen>
+    <dimen name="margin_botton">80px</dimen>
+    <dimen name="text_margin_top">21px</dimen>
+    <dimen name="margin_left_mainActivity">15dp</dimen>
+    <dimen name="margin_top_video_body">50dp</dimen>
+    <dimen name="icon_size">80px</dimen>
+    <dimen name="r_ic_close">72px</dimen>
+</resources>
